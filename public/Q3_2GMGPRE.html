@@ -103,7 +103,8 @@
             </textarea>
           </label><br/><br/>
           
-          
+      
+
         </fieldset>  
         <fieldset>
           <legend>Action Buttons</legend>
@@ -112,6 +113,19 @@
         </fieldset> 
       </form>
     </section>
-    <script src="q3e3script.js"></script>
+    <script>
+
+      form = document.getEleme
+      form.addEventListener("reset", function(e));{
+        if (!confirm("Are you sure you want to reset?"))
+        e.preventDefault()
+      }
+      form.addEventListener("submit", function(e)); {
+        if (!confirm("Are you sure you want to submit?"))
+        e.preventDefault()
+      }
+      
+    </script>
   </body>
 </html>
+
