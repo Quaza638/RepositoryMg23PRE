@@ -1,0 +1,12 @@
+.Rating div {
+    color:grey
+}
+.Rating input {
+    display: none;
+}
+.Rating input +label {
+    cursor:pointer;
+}
+.Rating input:checked +label ~ label {
+    color:yellow
+}
