@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="Pre, Samuel Francis B." />
+  <meta name="revised" content="3/26/2026" />
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .header, .footer {
+      background: lightblue;
+      padding: 10px;
+    }
+    .footer {
+       opacity: 0.5;
+       position: fixed; bottom: 0; width: 100%;
+       /*It stays locked to the screen when scrolling, it's fixed to the screen*/
+    }
+    .sidebar {
+      background: lightgreen;
+      width: 150px;
+      height: 200px;
+      position: relative; top: 2000px; left: 20px;
+      /* It's now relative to it's regular position rather than the whole screen*/
+    }
+    .content {
+      background: lightyellow;
+      width: 300px;
+      height: 200px;
+      position: fixed; top: 66px; left: 200px;
+      z-index: 1;
+      /*It places the element based on it's nearest positioned ancestor. It's different cause it's not fixed to the screen*/
+    }    
+    .notice {
+    position: absolute;;
+    top: 60px;
+    left: 430px;
+    background: orange;
+    padding: 10px;
+    z-index: 2;
+    /*cause it's absolute positioning. If you swap the z-index, content will cover notice */
+}
+/* Challenge
+I changed the value of the left position.
+It changed positions when it was relative, but fixed put it back to where absolute was.
+Z-index contols the z-axis and whether or not one element will cover another. 
+
+    REFLECTION
+a.
+b.
+c.
+d.
+*/
+  </style>
+</head>
+<body>
+    <div class="notice">Notice!</div>
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Main Content</div>
+  <div class="footer">Footer</div>
+</body>
+</html>
